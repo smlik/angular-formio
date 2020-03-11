@@ -1,1 +1,16 @@
-<form-builder [form]="  form" (change)="onChange($event)"></form-builder>
+<div class="mb-5">
+  <form-builder [form]="  form" (change)="onChange($event)"></form-builder>
+  <div class="row">
+    <div class="col-12 mb-5">
+      <div class="pull-right" style="float:right;">
+        <button class="btn save-button" (click)="saveForm()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<button (click)="show()">Show Saveed Form</button>
+
+
+<formio [form]="showForm" *ngIf="showForm"></formio>
